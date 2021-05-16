@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>在Windows系統安裝PostgreSQL | 被遺棄的天堂</title>
-  <meta name="keywords" content=" postgresql ">
-  <meta name="description" content="在Windows系統安裝PostgreSQL | 被遺棄的天堂">
+  <title>用Hexo搭建自己的部落格 | 被遺棄的天堂</title>
+  <meta name="keywords" content=" hexo , markdown , github ">
+  <meta name="description" content="用Hexo搭建自己的部落格 | 被遺棄的天堂">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="很抱歉，您所訪問的頁面不存在">
 <meta property="og:type" content="website">
@@ -356,9 +356,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Install-PostgreSQL" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Create-Your-Own-Blog-with-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">在Windows系統安裝PostgreSQL</h1>
+        <h1 class="article-title">用Hexo搭建自己的部落格</h1>
     
     <div class="article-meta">
         
@@ -376,14 +376,18 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color1">postgresql</a>
+            <a class="color5">hexo</a>
+            
+            <a class="color4">markdown</a>
+            
+            <a class="color2">github</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2021-05-16 13:20:00'>2021-05-16 12:22</time>
+            Created At : <time class="date" title='Updated At: 2021-05-16 17:33:22'>2021-05-16 17:33</time>
         
     </div>
     <!-- <div class="article-meta">
@@ -405,7 +409,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D"><span class="toc-text">安裝</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E4%BD%BF%E7%94%A8%E8%80%85"><span class="toc-text">創建使用者</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E8%B3%87%E6%96%99%E5%BA%AB"><span class="toc-text">創建資料庫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%AA%E9%99%A4%E8%B3%87%E6%96%99%E5%BA%AB"><span class="toc-text">刪除資料庫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-text">常用指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-text">參考文章</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-text">環境要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D"><span class="toc-text">安裝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E9%83%A8%E8%90%BD%E6%A0%BC"><span class="toc-text">創建部落格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%8F%9B%E4%B8%BB%E9%A1%8C"><span class="toc-text">更換主題</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0"><span class="toc-text">新增文章</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%87%E9%83%A8%E8%90%BD%E6%A0%BC%E4%BD%88%E7%BD%B2%E5%88%B0GitHub"><span class="toc-text">將部落格佈署到GitHub</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-deploy-git-%E5%A5%97%E4%BB%B6"><span class="toc-text">安裝 deploy git 套件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E4%B8%80%E5%80%8B%E8%88%87username%E5%90%8C%E5%90%8D%E7%9A%84repository"><span class="toc-text">創建一個與username同名的repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-config-yml%E6%AA%94"><span class="toc-text">修改_config.yml檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E4%B8%8AGitHub"><span class="toc-text">推上GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%8D%E6%AC%A1%E4%BF%AE%E6%94%B9-config-yml%E6%AA%94"><span class="toc-text">再次修改_config.yml檔</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -422,169 +426,164 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1></blockquote>
-<p>首先，打開安裝好的WSL Ubuntu，然後依序輸入以下內容</p>
+<h1 id="環境要求"><a href="#環境要求" class="headerlink" title="環境要求"></a>環境要求</h1></blockquote>
+<p>先確認你的電腦已經安裝</p>
+<ul>
+<li><p><a href="https://lailai-blog.gq/2021/05/16/Install-VScode-and-Git-and-Firefox/">Git</a><font color= #bbb>（若連結失效，請按ｉ搜尋<code>git</code>，應該就會找到我寫的安裝教學文章）</font></p>
+</li>
+<li><p><a href="https://lailai-blog.gq/2021/05/15/Install-Rails-and-Yarn-and-Node/">Node.js</a>(版本最好是12.0以上)<font color= #bbb>（若連結失效，請按ｉ搜尋<code>「node」</code>，應該就會找到我寫的安裝教學文章）</font></p>
+</li>
+<li><p>並且到<a target="_blank" rel="noopener" href="https://github.com/">GitHub官方網站</a>申請一個自己的帳號</p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1></blockquote>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><ul>
+<li>參考<a target="_blank" rel="noopener" href="https://hexo.io/docs/#Install-Hexo">Hexo官方網站</a></li>
+</ul>
+<p>打開Ubuntu輸入<code>npm install -g hexo-cli</code>後按Enter，就會開始跑安裝。</p>
+<p>安裝完成後可以輸入<code>hexo --version</code>，可以看到目前相關套件的版本。</p>
+<pre><code>$ hexo --version
+hexo-cli: 4.2.0
+os: Linux 4.4.0-19041-Microsoft linux x64
+node: 14.16.1
+v8: 8.4.371.19-node.18
+uv: 1.40.0
+zlib: 1.2.11
+brotli: 1.0.9
+ares: 1.16.1
+modules: 83
+nghttp2: 1.41.0
+napi: 7
+llhttp: 2.1.3
+openssl: 1.1.1k
+cldr: 37.0
+icu: 67.1
+tz: 2020a
+unicode: 13.0
+</code></pre>
+<h2 id="創建部落格"><a href="#創建部落格" class="headerlink" title="創建部落格"></a>創建部落格</h2><ol>
+<li><p>使用終端機指令<code>cd</code>切換到想要開資料夾的路徑</p>
+</li>
+<li><p>輸入<code>hexo init your_blog_name</code>（your_blog_name是你要新增的資料夾的名稱）</p>
+</li>
+<li><p><code>cd your_blog_name</code>切換到剛建立的資料夾</p>
+</li>
+<li><p><code>npm install</code> 安裝相關套件</p>
+</li>
+<li><p><code>hexo s</code> 啟動伺服器（第一次啟動時，會跳出windows安全性警訊，按「允許存取」）</p>
+</li>
+<li><p>打開瀏覽器，於網址列輸入<code>localhost:4000</code>即可打開剛創建的部落格</p>
+</li>
+</ol>
+<h2 id="更換主題"><a href="#更換主題" class="headerlink" title="更換主題"></a>更換主題</h2><p>在<a target="_blank" rel="noopener" href="https://hexo.io/themes/index.html">Hexo Themes</a>可以看到很多種主題可供選擇，大部分的點進去都可以看到該主題在部落格瀏覽時的樣式。</p>
+<p><img src="01-hexo_themes.jpg"></p>
+<p>找到喜歡的之後（通常這個步驟最花時間…），點主題的<font color= #0E83CD><strong>名字</strong></font>可以連結到該主題的GitHub頁面，這裡通常會有該主題作者的介紹和使用方式說明。</p>
+<p>這個部分也要花蠻多時間研究的，特別是想要做客製化的部分，還需要懂一些HTML、CSS和JavaScript或是jQuery才改的動。</p>
+<p><font color= #aaa><strong>（每個主題的安裝方法可能不盡相同，請以該主題GitHub首頁說明為主）</strong></font><br>這邊以<a target="_blank" rel="noopener" href="https://github.com/random-yang/paper">paper</a>這個主題當作示範</p>
 <ol>
-<li><p>$<code>sudo sh -c &#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list</code>，輸入完後Enter，接著輸入密碼</p>
+<li><p>在部落格的資料夾路徑下，輸入<code>cd themes</code>切換到主題的資料夾</p>
 </li>
-<li><p>$<code>wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -</code></p>
+<li><p><code>git clone git@github.com:random-yang/paper.git</code></p>
 </li>
-<li><p>$<code>sudo apt-get update</code></p>
+<li><p><code>npm install hexo-renderer-jade hexo-renderer-stylus --save</code></p>
 </li>
-<li><p>$<code>sudo apt-get -y install postgresql</code></p>
-</li>
-<li><p>$<code>sudo apt-get install postgresql-client libpq5 libpq-dev</code></p>
+<li><p>用編輯器（例如VScode）打開<code>_config.yml</code>，然後修改以下項目：</p>
 </li>
 </ol>
-<p>到這邊就安裝完成，可以輸入<code>psql --version</code>查詢所裝的PostgreSQL版本。</p>
-<hr>
-<blockquote>
-<h1 id="創建使用者"><a href="#創建使用者" class="headerlink" title="創建使用者"></a>創建使用者</h1></blockquote>
-<p>接著要創一個使用者以及資料庫。</p>
-<ol start="6">
-<li><p>$<code>sudo service postgresql start</code>，先啟動PG</p>
-</li>
-<li><p>$<code>sudo su - postgres</code></p>
-</li>
-<li><p>$<code>psql</code></p>
-</li>
-<li><p>=#<code>CREATE ROLE your_username WITH LOGIN CREATEDB ENCRYPTED PASSWORD &#39;your_password&#39;</code>，注意最後密碼的部分要用單引號<code>&#39;</code>不能用雙引號<code>&quot;</code></p>
-</li>
-<li><p>=#<code>\q</code></p>
-</li>
-<li><p>$<code>su - your_username</code>，並且輸入密碼</p>
-</li>
+<pre><code class="yml">theme: paper
+
+highlight:
+  hljs: true
+  enable: true
+  line_number: false
+  auto_detect: true
+  tab_replace: &#39;&#39;
+</code></pre>
+<ol start="5">
+<li>在Ubuntu輸入<code>hexo clean &amp;&amp; hexo s</code></li>
 </ol>
-<p>到這裡就建好使用者了</p>
-<hr>
-<blockquote>
-<h1 id="創建資料庫"><a href="#創建資料庫" class="headerlink" title="創建資料庫"></a>創建資料庫</h1></blockquote>
-<p>若是要創一個資料庫的話，可以繼續以下步驟</p>
-<ol start="12">
-<li><p>$<code>createdb your_database_name</code></p>
-</li>
-<li><p>$<code>sudo su - postgres</code></p>
-</li>
-<li><p>$<code>psql</code></p>
-</li>
-<li><p>=#<code>\list</code>，可以查看資料庫列表，包含資料庫名稱、擁有者的資訊</p>
-</li>
-</ol>
-<hr>
-<blockquote>
-<h1 id="刪除資料庫"><a href="#刪除資料庫" class="headerlink" title="刪除資料庫"></a>刪除資料庫</h1></blockquote>
-<p>若是要刪除資料庫的話，可以參考以下步驟</p>
-<ol start="16">
-<li><p>=#<code>\q</code></p>
-</li>
-<li><p>$<code>su - your_username</code>，並且輸入密碼</p>
-</li>
-<li><p>$<code>dropdb your_database_name</code></p>
-</li>
-<li><p>$<code>sudo su - postgres</code></p>
-</li>
-<li><p>$<code>psql</code></p>
-</li>
-<li><p>=#<code>\list</code></p>
-</li>
-</ol>
-<p>應該會看到剛剛建立的資料庫已經被刪除了</p>
-<p>之後每次開Ubuntu的時候，記得要先輸入步驟6.<code>sudo service postgresql start</code>啟動PG才能使用</p>
-<hr>
-<blockquote>
-<h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1></blockquote>
-<p>在<code>username@電腦名稱:~$</code>的輸入框下，可以輸入的指令</p>
-<table>
-<thead>
-<tr>
-<th>指令</th>
-<th>說明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>sudo service postgresql start</td>
-<td>啟動PostgreSQL</td>
-</tr>
-<tr>
-<td>psql –version</td>
-<td>查看PostgreSQL版本</td>
-</tr>
-<tr>
-<td>sudo su - postgres</td>
-<td>切換到預設使用者postgres</td>
-</tr>
-</tbody></table>
+<p>此時打開瀏覽器，網址列輸入<code>localhost:4000</code>應該就能看到你的部落格換成paper主題了～</p>
+<h2 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h2><p>輸入<code>hexo new &quot;文章名稱&quot;</code>會在source/_posts項目下創立新增的文章檔案，這是一個md檔（markdown）。</p>
+<p>裡面可以輸入title（發布的文章名稱）、date（發布日期時間）、categories（文章類別）、tags（標籤）</p>
+<p>關於markdown的使用方式，可以參考以下連結：</p>
 <ul>
-<li><code>createdb your_database_name</code></li>
-<li><code>dropdb your_database_name</code></li>
-</ul>
-<p>–</p>
-<p>在<code>postgres@電腦名稱:~$</code>的輸入框下，可以輸入的指令</p>
-<table>
-<thead>
-<tr>
-<th>指令</th>
-<th>說明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>psql –version</td>
-<td>查看PostgreSQL版本</td>
-</tr>
-<tr>
-<td>su - username</td>
-<td>切換使用者</td>
-</tr>
-<tr>
-<td>psql</td>
-<td>進入<code>postgres=#</code>輸入框</td>
-</tr>
-</tbody></table>
-<p>–</p>
-<p>在<code>postgres=#</code>的輸入框下，常用的指令</p>
-<table>
-<thead>
-<tr>
-<th>指令</th>
-<th>說明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>\h</td>
-<td>查看所有SQL指令，再輸入q可離開</td>
-</tr>
-<tr>
-<td>\l</td>
-<td>列出所有資料庫列表，即\list</td>
-</tr>
-<tr>
-<td>\du</td>
-<td>列出所有使用者列表</td>
-</tr>
-<tr>
-<td>\e</td>
-<td>打開編輯器</td>
-</tr>
-<tr>
-<td>\q</td>
-<td>離開<code>postgres=#</code>輸入框</td>
-</tr>
-</tbody></table>
-<p>這些指令輸入完記得都要有分號<code>;</code>，不然不會動作</p>
-<ul>
-<li><code>CREATE ROLE your_username WITH LOGIN CREATEDB ENCRYPTED PASSWORD &#39;your_password&#39;;</code>創建使用者及密碼</li>
-<li><code>CREATE DATABASE database_name;</code> Owner為預設的postgres</li>
-<li><code>CREATE DATABASE your_database_name OWNER your_username;</code> Owner為your_username</li>
-<li><code>DROP DATABASE your_database_name</code> 刪除資料庫</li>
+<li><a target="_blank" rel="noopener" href="https://ed521.github.io/2019/08/hexo-markdown/">[教學] 撰寫 Hexo 文章 - Markdown 語法大全</a></li>
+<li><a target="_blank" rel="noopener" href="https://dillinger.io/">Dillinger</a></li>
 </ul>
 <hr>
 <blockquote>
-<h1 id="參考文章"><a href="#參考文章" class="headerlink" title="參考文章"></a>參考文章</h1></blockquote>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.postgresql.org/download/linux/ubuntu/">PostgreSQL Linux downloads (Ubuntu)</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/questions/gem-install-pg-not-working">DigitalOcean|”gem install pg” not working</a></li>
-<li><a target="_blank" rel="noopener" href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/676949/">程式前沿|PostgreSQL常用指令及操作</a> </li>
-</ul>
+<h1 id="將部落格佈署到GitHub"><a href="#將部落格佈署到GitHub" class="headerlink" title="將部落格佈署到GitHub"></a>將部落格佈署到GitHub</h1></blockquote>
+<h2 id="安裝-deploy-git-套件"><a href="#安裝-deploy-git-套件" class="headerlink" title="安裝 deploy git 套件"></a>安裝 deploy git 套件</h2><ol>
+<li>在Ubuntu輸入<code>npm install hexo-deployer-git --save</code></li>
+</ol>
+<h2 id="創建一個與username同名的repository"><a href="#創建一個與username同名的repository" class="headerlink" title="創建一個與username同名的repository"></a>創建一個與username同名的repository</h2><ol start="2">
+<li><p>登入GitHub之後，在右上角的＋可以點選「New repository」</p>
+</li>
+<li><p>Repository name取名為<code>帳號名稱.github.io</code>（帳號名稱即為左邊Owner名稱）</p>
+</li>
+</ol>
+<p><img src="02-create_repository.jpg"></p>
+<ol start="4">
+<li>按下「Create repository」，選HTTPS，然後把右邊那條連結複製起來</li>
+</ol>
+<p><img src="03-copy_link.jpg"></p>
+<h2 id="修改-config-yml檔"><a href="#修改-config-yml檔" class="headerlink" title="修改_config.yml檔"></a>修改_config.yml檔</h2><ol start="5">
+<li>打開<code>_config.yml</code>，將剛剛複製的網址貼到repo去</li>
+</ol>
+<p><img src="04-config_yml.jpg"></p>
+<h2 id="推上GitHub"><a href="#推上GitHub" class="headerlink" title="推上GitHub"></a>推上GitHub</h2><ol start="6">
+<li>Ubuntu輸入<code>hexo g -d</code></li>
+</ol>
+<p>若出現</p>
+<pre><code class="bash">*** Please tell me who you are.
+
+Run
+
+  git config --global user.email &quot;you@example.com&quot;
+  git config --global user.name &quot;Your Name&quot;
+
+to set your account&#39;s default identity.
+Omit --global to set the identity only in this repository.
+</code></pre>
+<p>表示之前沒設定過git的config檔案，只要照著輸入</p>
+<pre><code class="bash">git config --global user.email &quot;你的email&quot;
+git config --global user.name &quot;你的名稱&quot;
+</code></pre>
+<p>然後再推上去一次即可。</p>
+<p>過程中可能會出現<code>fatal: Authentication failed for ...</code>，可以試著改用Git-bash切換到該資料夾，然後再跟著步驟4. 創完Repository時的頁面，依序輸入</p>
+<pre><code class="bash">git remote add origin https://github.com/...
+git remote add 遠端分支 遠端連結
+
+git branch -M main
+將本地分支改名為main
+
+git push -u origin main
+git push -u 遠端分支 本地分支
+</code></pre>
+<blockquote>
+<p>這裡應該會被要求輸入GitHub的帳號和密碼</p>
+</blockquote>
+<ol start="7">
+<li>回到GitHub的repository頁面，在<strong>Settings</strong>裡面的<strong>Pages</strong>應該可以看到</li>
+</ol>
+<blockquote>
+<p>Your site is published at https://帳號名稱.github.io</p>
+</blockquote>
+<h2 id="再次修改-config-yml檔"><a href="#再次修改-config-yml檔" class="headerlink" title="再次修改_config.yml檔"></a>再次修改_config.yml檔</h2><ol start="8">
+<li>打開<code>_config.yml</code>，將url改成上面這個網址</li>
+</ol>
+<p><img src="05-config_yml_url.jpg"></p>
+<p>大功告成，未來更新文章之後，輸入<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>就可以推上GitHub更新部落格囉～</p>
+<hr>
+<blockquote>
+<p>補充：在Ubuntu根目錄<code>~</code>裡面有個<code>.bashrc</code>檔案，可以在裡面設定</p>
+<pre><code class="bash">alias hs=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#39;
+alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#39;
+</code></pre>
+<p>未來要在本機開啟部落格時可以直接打<code>hs</code>；更新至GitHub時打<code>hd</code>就可以啦～是不是輕鬆很多！</p>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源。 </span>
