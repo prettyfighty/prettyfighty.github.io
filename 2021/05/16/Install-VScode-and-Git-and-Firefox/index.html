@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>在Windows系統安裝VScode、Git、Firefox | 被遺棄的天堂</title>
+  <meta name="keywords" content=" vscode , git , firefox ">
+  <meta name="description" content="在Windows系統安裝VScode、Git、Firefox | 被遺棄的天堂">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="很抱歉，您所訪問的頁面不存在">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404 NOT FOUND">
+<meta property="og:url" content="https://lailai-blog.gq/404.html">
+<meta property="og:site_name" content="被遺棄的天堂">
+<meta property="og:description" content="很抱歉，您所訪問的頁面不存在">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-12T12:13:05.000Z">
+<meta property="article:modified_time" content="2021-05-11T21:31:48.000Z">
+<meta property="article:author" content="Lailai">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/railscasts.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Lailai</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/prettyfighty"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="instagram"
+               href="https://www.instagram.com/prettyfighty"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="所有文章">所有文章
+            
+                <small>(6)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="分享">
+                        
+                        分享
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="教學">
+                        
+                        教學
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="小知識">
+                        
+                        小知識
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Links</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="6">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://railsbook.tw/">為你自己學 Ruby on Rails</a></li>
+            
+            <li><a target="_blank" href="https://gitbook.tw/">為你自己學 Git</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜尋 快捷鍵 i"></i>
+            <div class="right-title">所有文章</div>
+            <i class="iconfont icon-file-tree" data-title="切換到目錄 快捷鍵 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="符合大小寫"></i>
+            <i class="iconfont icon-tag" data-title="標籤"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">目錄</div>
+            <i class="iconfont icon-list" data-title="切換到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>firefox</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gems</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nvm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>postgresql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>rails</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ruby</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>rvm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ubuntu</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vscode</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="所有文章 教學 "
+           href="/2021/05/16/Install-PostgreSQL/"
+           data-tag="postgresql"
+           data-author="" >
+            <span class="post-title" title="在Windows系統安裝PostgreSQL">在Windows系統安裝PostgreSQL</span>
+            <span class="post-date" title="2021-05-16 12:22:31">2021/05/16</span>
+        </a>
+        
+        <a  class="所有文章 教學 "
+           href="/2021/05/16/Install-VScode-and-Git-and-Firefox/"
+           data-tag="vscode,git,firefox"
+           data-author="" >
+            <span class="post-title" title="在Windows系統安裝VScode、Git、Firefox">在Windows系統安裝VScode、Git、Firefox</span>
+            <span class="post-date" title="2021-05-16 09:41:24">2021/05/16</span>
+        </a>
+        
+        <a  class="所有文章 分享 "
+           href="/2021/05/16/Ruby-Gems/"
+           data-tag="rails,ruby,gems"
+           data-author="" >
+            <span class="post-title" title="推薦的Ruby Gems">推薦的Ruby Gems</span>
+            <span class="post-date" title="2021-05-16 08:15:10">2021/05/16</span>
+        </a>
+        
+        <a  class="所有文章 教學 "
+           href="/2021/05/15/Install-Rails-and-Yarn-and-Node/"
+           data-tag="rails,ubuntu,nvm,node"
+           data-author="" >
+            <span class="post-title" title="在Windows系統安裝Rails、Yarn、NVM、NodeJS">在Windows系統安裝Rails、Yarn、NVM、NodeJS</span>
+            <span class="post-date" title="2021-05-15 21:47:23">2021/05/15</span>
+        </a>
+        
+        <a  class="所有文章 教學 "
+           href="/2021/05/15/Install-Ubuntu-and-Ruby-on-Windows/"
+           data-tag="ubuntu,ruby,rvm"
+           data-author="" >
+            <span class="post-title" title="在Windows系統安裝Ubuntu、RVM及Ruby">在Windows系統安裝Ubuntu、RVM及Ruby</span>
+            <span class="post-date" title="2021-05-15 20:33:49">2021/05/15</span>
+        </a>
+        
+        <a  class="所有文章 小知識 "
+           href="/2021/05/15/The-difference-between-Symbol-and-String/"
+           data-tag="ruby"
+           data-author="" >
+            <span class="post-title" title="Ruby裡 String 和 Symbol 的異同">Ruby裡 String 和 Symbol 的異同</span>
+            <span class="post-date" title="2021-05-15 17:01:16">2021/05/15</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切換全螢幕 快捷鍵 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Install-VScode-and-Git-and-Firefox" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">在Windows系統安裝VScode、Git、Firefox</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="教學">教學</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">vscode</a>
+            
+            <a class="color4">git</a>
+            
+            <a class="color3">firefox</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2021-05-16 11:58:44'>2021-05-16 09:41</time>
+        
+    </div>
+    <!-- <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div> -->
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%9DVScode"><span class="toc-text">安裝VScode</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%9DGit"><span class="toc-text">安裝Git</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%9DFirefox"><span class="toc-text">安裝Firefox</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由於電腦硬碟壞掉，所以換了一顆硬碟並重灌，發現有很多資料和軟體要轉移真的麻煩的，而且很多東西必須要重新安裝 Orz</p>
+<blockquote>
+<h1 id="安裝VScode"><a href="#安裝VScode" class="headerlink" title="安裝VScode"></a>安裝VScode</h1></blockquote>
+<p>首先到<a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">VScode的官方網站</a>，看你的電腦是32位元還是64位元，然後點下去對應的按鈕之後就會開始下載。</p>
+<p>我之前是用portable免安裝版本（.zip那個），所以我只要將VScode的資料夾從壞掉的硬碟複製到好的硬碟即可。</p>
+<p>不過，我發現原本安裝好的擴充套件和snippet沒有跟著轉過來，所以去查了一下。</p>
+<p>原來，VScode的擴充套件位置預設儲存在<code>\Users\你的使用者名稱\.vscode</code>這個資料夾裡，所以把這個資料夾複製貼到重灌後對應的路徑下，再開啟VScode就會出現之前安裝過的套件了！</p>
+<p>另外，snippets檔案則是存在<code>\Users\你的使用者名稱\AppData\Roaming\Code\你的使用者名稱\snippets</code>這個路徑裡面，因為我發現這個Code資料夾還有其他快取和Cookies檔案，所以我是直接把這個Code資料夾也整個複製貼到新硬碟的對應路徑，以確保資料可以完整地轉移。</p>
+<hr>
+<blockquote>
+<h1 id="安裝Git"><a href="#安裝Git" class="headerlink" title="安裝Git"></a>安裝Git</h1></blockquote>
+<p>一樣是到<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git的官方網站</a>，選擇對應的選項點下去開始下載，然後一路下一步按到底就可以裝好了。</p>
+<p>這邊我一樣是下載免安裝版本（Portable），好處就是刪除時只要把整個資料夾砍掉即可，而要安裝到其他電腦上時只要複製貼上這個資料夾就完成了！</p>
+<p>……如果這麼簡單的話，我就不會特別寫這篇文章了。</p>
+<p>跟VScode一樣，它還有些設定檔是存在於其他地方的，像這樣直接把資料夾複製過去之後，雖然一樣可以開啟，但之前設定過的username、email、alias……等等方便使用的東西都要重新設定，感覺就很麻煩。</p>
+<p>因此，除了將這個資料夾複製過去（或是其實可以直接在官方下載），還要將<code>\Users\你的使用者名稱\.gitconfig</code>這個檔案也一併複製貼到新硬碟的對應路徑，這樣就不用再重新設定config，也不用擔心會忘記之前的設定而少設了。</p>
+<hr>
+<blockquote>
+<h1 id="安裝Firefox"><a href="#安裝Firefox" class="headerlink" title="安裝Firefox"></a>安裝Firefox</h1></blockquote>
+<p>在<a target="_blank" rel="noopener" href="https://www.mozilla.org/">Firefox官方網站</a>點選「下載Firefox」即可，下載好之後就點兩下開啟安裝檔，然後就是一路下一步。</p>
+<p>這邊想介紹的是，該怎麼把原電腦上的書籤、歷史紀錄、快取……等等資料做轉移。</p>
+<p>在原本磁碟的<code>\User\你的使用者名稱\AppData\Local\Mozilla\Firefox\Profiles</code>這個資料夾裡面，會有一個亂數取名的資料夾（在此稱為A資料夾），而新安裝好firefox的磁碟對應位置應該也會有一個不同亂數的資料夾（在此稱為B資料夾）。</p>
+<p>如果有開啟Firefox瀏覽器的話，先將Firefox完全關閉。</p>
+<p>接著點進去A資料夾，Ctrl+A全選檔案，然後Ctrl+C通通複製，再點進去B資料夾裡面，一樣Ctrl+A全選檔案，接著Ctrl+V全部貼上。</p>
+<p>重新開啟Firefox瀏覽器，此時就可以看到熟悉的分頁、書籤、歷史資料通通都出現了～</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©copyright 2021 Lailai
+</p>
+<!-- <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p> -->
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切換全螢幕 快捷鍵 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://www.popdaily.com.tw/wp-content/uploads/2020/12/etscig8xqggsggs8scgw808g8qlf83y-800x1000.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

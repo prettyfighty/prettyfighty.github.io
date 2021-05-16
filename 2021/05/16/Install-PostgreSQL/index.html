@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>在Windows系統安裝PostgreSQL | 被遺棄的天堂</title>
+  <meta name="keywords" content=" postgresql ">
+  <meta name="description" content="在Windows系統安裝PostgreSQL | 被遺棄的天堂">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="很抱歉，您所訪問的頁面不存在">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404 NOT FOUND">
+<meta property="og:url" content="https://lailai-blog.gq/404.html">
+<meta property="og:site_name" content="被遺棄的天堂">
+<meta property="og:description" content="很抱歉，您所訪問的頁面不存在">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-12T12:13:05.000Z">
+<meta property="article:modified_time" content="2021-05-11T21:31:48.000Z">
+<meta property="article:author" content="Lailai">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/railscasts.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Lailai</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/prettyfighty"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="instagram"
+               href="https://www.instagram.com/prettyfighty"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="所有文章">所有文章
+            
+                <small>(6)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="分享">
+                        
+                        分享
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="教學">
+                        
+                        教學
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="小知識">
+                        
+                        小知識
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Links</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="6">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://railsbook.tw/">為你自己學 Ruby on Rails</a></li>
+            
+            <li><a target="_blank" href="https://gitbook.tw/">為你自己學 Git</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜尋 快捷鍵 i"></i>
+            <div class="right-title">所有文章</div>
+            <i class="iconfont icon-file-tree" data-title="切換到目錄 快捷鍵 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="符合大小寫"></i>
+            <i class="iconfont icon-tag" data-title="標籤"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">目錄</div>
+            <i class="iconfont icon-list" data-title="切換到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>firefox</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gems</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nvm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>postgresql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>rails</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ruby</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>rvm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ubuntu</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vscode</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="所有文章 教學 "
+           href="/2021/05/16/Install-PostgreSQL/"
+           data-tag="postgresql"
+           data-author="" >
+            <span class="post-title" title="在Windows系統安裝PostgreSQL">在Windows系統安裝PostgreSQL</span>
+            <span class="post-date" title="2021-05-16 12:22:31">2021/05/16</span>
+        </a>
+        
+        <a  class="所有文章 教學 "
+           href="/2021/05/16/Install-VScode-and-Git-and-Firefox/"
+           data-tag="vscode,git,firefox"
+           data-author="" >
+            <span class="post-title" title="在Windows系統安裝VScode、Git、Firefox">在Windows系統安裝VScode、Git、Firefox</span>
+            <span class="post-date" title="2021-05-16 09:41:24">2021/05/16</span>
+        </a>
+        
+        <a  class="所有文章 分享 "
+           href="/2021/05/16/Ruby-Gems/"
+           data-tag="rails,ruby,gems"
+           data-author="" >
+            <span class="post-title" title="推薦的Ruby Gems">推薦的Ruby Gems</span>
+            <span class="post-date" title="2021-05-16 08:15:10">2021/05/16</span>
+        </a>
+        
+        <a  class="所有文章 教學 "
+           href="/2021/05/15/Install-Rails-and-Yarn-and-Node/"
+           data-tag="rails,ubuntu,nvm,node"
+           data-author="" >
+            <span class="post-title" title="在Windows系統安裝Rails、Yarn、NVM、NodeJS">在Windows系統安裝Rails、Yarn、NVM、NodeJS</span>
+            <span class="post-date" title="2021-05-15 21:47:23">2021/05/15</span>
+        </a>
+        
+        <a  class="所有文章 教學 "
+           href="/2021/05/15/Install-Ubuntu-and-Ruby-on-Windows/"
+           data-tag="ubuntu,ruby,rvm"
+           data-author="" >
+            <span class="post-title" title="在Windows系統安裝Ubuntu、RVM及Ruby">在Windows系統安裝Ubuntu、RVM及Ruby</span>
+            <span class="post-date" title="2021-05-15 20:33:49">2021/05/15</span>
+        </a>
+        
+        <a  class="所有文章 小知識 "
+           href="/2021/05/15/The-difference-between-Symbol-and-String/"
+           data-tag="ruby"
+           data-author="" >
+            <span class="post-title" title="Ruby裡 String 和 Symbol 的異同">Ruby裡 String 和 Symbol 的異同</span>
+            <span class="post-date" title="2021-05-15 17:01:16">2021/05/15</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切換全螢幕 快捷鍵 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Install-PostgreSQL" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">在Windows系統安裝PostgreSQL</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="教學">教學</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">postgresql</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2021-05-16 13:20:00'>2021-05-16 12:22</time>
+        
+    </div>
+    <!-- <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div> -->
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D"><span class="toc-text">安裝</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E4%BD%BF%E7%94%A8%E8%80%85"><span class="toc-text">創建使用者</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E8%B3%87%E6%96%99%E5%BA%AB"><span class="toc-text">創建資料庫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%AA%E9%99%A4%E8%B3%87%E6%96%99%E5%BA%AB"><span class="toc-text">刪除資料庫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-text">常用指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-text">參考文章</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1></blockquote>
+<p>首先，打開安裝好的WSL Ubuntu，然後依序輸入以下內容</p>
+<ol>
+<li><p>$<code>sudo sh -c &#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list</code>，輸入完後Enter，接著輸入密碼</p>
+</li>
+<li><p>$<code>wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -</code></p>
+</li>
+<li><p>$<code>sudo apt-get update</code></p>
+</li>
+<li><p>$<code>sudo apt-get -y install postgresql</code></p>
+</li>
+<li><p>$<code>sudo apt-get install postgresql-client libpq5 libpq-dev</code></p>
+</li>
+</ol>
+<p>到這邊就安裝完成，可以輸入<code>psql --version</code>查詢所裝的PostgreSQL版本。</p>
+<hr>
+<blockquote>
+<h1 id="創建使用者"><a href="#創建使用者" class="headerlink" title="創建使用者"></a>創建使用者</h1></blockquote>
+<p>接著要創一個使用者以及資料庫。</p>
+<ol start="6">
+<li><p>$<code>sudo service postgresql start</code>，先啟動PG</p>
+</li>
+<li><p>$<code>sudo su - postgres</code></p>
+</li>
+<li><p>$<code>psql</code></p>
+</li>
+<li><p>=#<code>CREATE ROLE your_username WITH LOGIN CREATEDB ENCRYPTED PASSWORD &#39;your_password&#39;</code>，注意最後密碼的部分要用單引號<code>&#39;</code>不能用雙引號<code>&quot;</code></p>
+</li>
+<li><p>=#<code>\q</code></p>
+</li>
+<li><p>$<code>su - your_username</code>，並且輸入密碼</p>
+</li>
+</ol>
+<p>到這裡就建好使用者了</p>
+<hr>
+<blockquote>
+<h1 id="創建資料庫"><a href="#創建資料庫" class="headerlink" title="創建資料庫"></a>創建資料庫</h1></blockquote>
+<p>若是要創一個資料庫的話，可以繼續以下步驟</p>
+<ol start="12">
+<li><p>$<code>createdb your_database_name</code></p>
+</li>
+<li><p>$<code>sudo su - postgres</code></p>
+</li>
+<li><p>$<code>psql</code></p>
+</li>
+<li><p>=#<code>\list</code>，可以查看資料庫列表，包含資料庫名稱、擁有者的資訊</p>
+</li>
+</ol>
+<hr>
+<blockquote>
+<h1 id="刪除資料庫"><a href="#刪除資料庫" class="headerlink" title="刪除資料庫"></a>刪除資料庫</h1></blockquote>
+<p>若是要刪除資料庫的話，可以參考以下步驟</p>
+<ol start="16">
+<li><p>=#<code>\q</code></p>
+</li>
+<li><p>$<code>su - your_username</code>，並且輸入密碼</p>
+</li>
+<li><p>$<code>dropdb your_database_name</code></p>
+</li>
+<li><p>$<code>sudo su - postgres</code></p>
+</li>
+<li><p>$<code>psql</code></p>
+</li>
+<li><p>=#<code>\list</code></p>
+</li>
+</ol>
+<p>應該會看到剛剛建立的資料庫已經被刪除了</p>
+<p>之後每次開Ubuntu的時候，記得要先輸入步驟6.<code>sudo service postgresql start</code>啟動PG才能使用</p>
+<hr>
+<blockquote>
+<h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1></blockquote>
+<p>在<code>username@電腦名稱:~$</code>的輸入框下，可以輸入的指令</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sudo service postgresql start</td>
+<td>啟動PostgreSQL</td>
+</tr>
+<tr>
+<td>psql –version</td>
+<td>查看PostgreSQL版本</td>
+</tr>
+<tr>
+<td>sudo su - postgres</td>
+<td>切換到預設使用者postgres</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>createdb your_database_name</code></li>
+<li><code>dropdb your_database_name</code></li>
+</ul>
+<p>–</p>
+<p>在<code>postgres@電腦名稱:~$</code>的輸入框下，可以輸入的指令</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>psql –version</td>
+<td>查看PostgreSQL版本</td>
+</tr>
+<tr>
+<td>su - username</td>
+<td>切換使用者</td>
+</tr>
+<tr>
+<td>psql</td>
+<td>進入<code>postgres=#</code>輸入框</td>
+</tr>
+</tbody></table>
+<p>–</p>
+<p>在<code>postgres=#</code>的輸入框下，常用的指令</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\h</td>
+<td>查看所有SQL指令，再輸入q可離開</td>
+</tr>
+<tr>
+<td>\l</td>
+<td>列出所有資料庫列表，即\list</td>
+</tr>
+<tr>
+<td>\du</td>
+<td>列出所有使用者列表</td>
+</tr>
+<tr>
+<td>\e</td>
+<td>打開編輯器</td>
+</tr>
+<tr>
+<td>\q</td>
+<td>離開<code>postgres=#</code>輸入框</td>
+</tr>
+</tbody></table>
+<p>這些指令輸入完記得都要有分號<code>;</code>，不然不會動作</p>
+<ul>
+<li><code>CREATE ROLE your_username WITH LOGIN CREATEDB ENCRYPTED PASSWORD &#39;your_password&#39;;</code>創建使用者及密碼</li>
+<li><code>CREATE DATABASE database_name;</code> Owner為預設的postgres</li>
+<li><code>CREATE DATABASE your_database_name OWNER your_username;</code> Owner為your_username</li>
+<li><code>DROP DATABASE your_database_name</code> 刪除資料庫</li>
+</ul>
+<hr>
+<blockquote>
+<h1 id="參考文章"><a href="#參考文章" class="headerlink" title="參考文章"></a>參考文章</h1></blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.postgresql.org/download/linux/ubuntu/">PostgreSQL Linux downloads (Ubuntu)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/questions/gem-install-pg-not-working">DigitalOcean|”gem install pg” not working</a></li>
+<li><a target="_blank" rel="noopener" href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/676949/">程式前沿|PostgreSQL常用指令及操作</a> </li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©copyright 2021 Lailai
+</p>
+<!-- <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p> -->
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切換全螢幕 快捷鍵 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://www.popdaily.com.tw/wp-content/uploads/2020/12/etscig8xqggsggs8scgw808g8qlf83y-800x1000.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
