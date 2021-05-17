@@ -589,7 +589,7 @@ $(function () {
     }
 
     /*友情链接*/
-    $('.friends').on('click',function () {
+    $('.friends').on('click', function () {
         isFriend = !isFriend
         $('.friends-area,.title-list').toggleClass('friend');
     })
