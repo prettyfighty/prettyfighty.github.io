@@ -439,7 +439,7 @@ function syncOutline(_this) {
     if ($('#outline-list .toc-link[href!="#"]').length > 0 && !clickScrollTo) {
         var activeIndex = null
         $('#outline-list .toc-link[href!="#"]').each(function (index) {
-            var diff = _this.scrollTop - $(_this).find(decodeURI($(this).attr('href')))[0].offsetTop
+            var diff = (_this.scrollTop) - $(_this).find(decodeURI($(this).attr('href')))[0].offsetTop
             if (diff < -20) {
                 activeIndex = index === 0 ? 0 : index - 1
                 return false
