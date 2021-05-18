@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>推薦的Ruby Gems | 被遺棄的天堂</title>
-  <meta name="keywords" content=" ruby , rails , gems ">
-  <meta name="description" content="推薦的Ruby Gems | 被遺棄的天堂">
+  <title>在Rails專案裡安裝tailwindcss | 被遺棄的天堂</title>
+  <meta name="keywords" content=" rails , tailwind ">
+  <meta name="description" content="在Rails專案裡安裝tailwindcss | 被遺棄的天堂">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="很抱歉，您所訪問的頁面不存在">
 <meta property="og:type" content="website">
@@ -372,9 +372,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Ruby-Gems" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Install-Tailwind-To-You-Rails-Projecs" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">推薦的Ruby Gems</h1>
+        <h1 class="article-title">在Rails專案裡安裝tailwindcss</h1>
     
     <div class="article-meta">
         
@@ -384,7 +384,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="分享">分享</a>
+            <a  data-rel="教學">教學</a>
             
         </span>
         
@@ -392,18 +392,16 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">ruby</a>
-            
             <a class="color1">rails</a>
             
-            <a class="color5">gems</a>
+            <a class="color4">tailwind</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2021-05-16 08:15:41'>2021-05-16 08:15</time>
+            Created At : <time class="date" title='Updated At: 2021-05-18 14:10:38'>2021-05-18 12:41</time>
         
     </div>
     <!-- <div class="article-meta">
@@ -414,7 +412,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#rack"><span class="toc-text">rack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#faker"><span class="toc-text">faker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rspec"><span class="toc-text">rspec</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#puma"><span class="toc-text">puma</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kaminari"><span class="toc-text">kaminari</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nokogiri"><span class="toc-text">nokogiri</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#simple-form"><span class="toc-text">simple_form</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#foreman"><span class="toc-text">foreman</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#devise"><span class="toc-text">devise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#carrierwave"><span class="toc-text">carrierwave</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#figaro"><span class="toc-text">figaro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#acts-as-paranoid"><span class="toc-text">acts_as_paranoid</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-text">環境要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%B5%E7%AB%8B%E5%B0%88%E6%A1%88-rails-new"><span class="toc-text">創立專案 rails new</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%9DTailwind-CSS-v2-0"><span class="toc-text">安裝Tailwind CSS v2.0</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%B5%E5%BB%BAconfig%E8%A8%AD%E5%AE%9A%E6%AA%94%EF%BC%8C%E4%B8%A6%E5%8A%A0%E5%85%A5purge%E6%B8%85%E9%99%A4%E7%9A%84%E6%AA%94%E6%A1%88"><span class="toc-text">創建config設定檔，並加入purge清除的檔案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5tailwindcss"><span class="toc-text">引入tailwindcss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%87tailwindcss%E5%BC%95%E5%85%A5%E6%89%93%E5%8C%85%E6%AA%94"><span class="toc-text">將tailwindcss引入打包檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8postcss%E8%A3%A1%E9%9D%A2%E5%BC%95%E5%85%A5tailwind"><span class="toc-text">在postcss裡面引入tailwind</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%BF%E6%95%B4layout"><span class="toc-text">調整layout</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%AC%E8%A9%A6%E6%95%88%E6%9E%9C"><span class="toc-text">測試效果</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E9%A0%81%E9%9D%A2%E4%B8%A6%E8%A8%AD%E5%AE%9A%E4%B8%BB%E9%A0%81"><span class="toc-text">新增頁面並設定主頁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%96%8B%E5%95%9Frails-server%E5%8F%8Awebpacker"><span class="toc-text">開啟rails server及webpacker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%A2%9Etailwindcss%E7%9A%84class%E6%95%88%E6%9E%9C"><span class="toc-text">新增tailwindcss的class效果</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A3%9C%E5%85%85"><span class="toc-text">補充</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A8%BB%E9%87%8B"><span class="toc-text">註釋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-text">參考資料</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -430,63 +428,145 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="rack"><a href="#rack" class="headerlink" title="rack"></a>rack</h2><p><code>gem install rack</code></p>
-<blockquote>
-<p>Rack provides a minimal, modular and adaptable interface for developing web applications in Ruby. By wrapping HTTP requests and responses in the simplest way possible, it unifies and distills the API for web servers, web frameworks, and software in between (the so-called middleware) into a single method call.</p>
-</blockquote>
-<p>Rack提供了一個在用Ruby來開發網路應用程式時的介面。藉由將HTTP requests 和 responses 盡可能地簡單包裹，結合伺服器、框架和軟體為一個簡單的call方法。簡單來說，就是讓Ruby能夠和伺服器之間進行溝通的工具。</p>
-<h2 id="faker"><a href="#faker" class="headerlink" title="faker"></a>faker</h2><p><code>gem install faker</code></p>
-<blockquote>
-<p>Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.</p>
-</blockquote>
-<p>這是測試時常用的套件，可以產生很多假資料，包括姓名、地址、email和電話……等等。</p>
-<h2 id="rspec"><a href="#rspec" class="headerlink" title="rspec"></a>rspec</h2><p><code>gem install rspec</code></p>
-<p>這是Test-Driven Development（TDD），測試驅動開發常用的套件，可以在開發時先寫規格，然後用這個套件來跑測試看看code有沒有寫對。</p>
-<h2 id="puma"><a href="#puma" class="headerlink" title="puma"></a>puma</h2><p><code>gem install puma</code></p>
-<blockquote>
-<p>Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications. Puma is intended for use in both development and production environments. </p>
-</blockquote>
-<p>雖然它跟某個著名的鞋子品牌同名，但在這裡它是啟動server時的一個好幫手，可以跑的比內建的還快。</p>
-<h2 id="kaminari"><a href="#kaminari" class="headerlink" title="kaminari"></a>kaminari</h2><p><code>gem install kaminari</code></p>
-<blockquote>
-<p>Kaminari is a Scope &amp; Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 4+</p>
-</blockquote>
-<p>一個好用的分頁產生器，還可以客製化成自己喜歡的風格樣式。</p>
-<h2 id="nokogiri"><a href="#nokogiri" class="headerlink" title="nokogiri"></a>nokogiri</h2><p><code>gem install nokogiri</code></p>
-<blockquote>
-<p>Nokogiri (鋸) makes it easy and painless to work with XML and HTML from Ruby. It provides a sensible, easy-to-understand API for reading, writing, modifying, and querying documents. It is fast and standards-compliant by relying on native parsers like libxml2 (C) and xerces (Java).</p>
-</blockquote>
-<p>寫網路爬蟲時很好用的一個套件。</p>
-<h2 id="simple-form"><a href="#simple-form" class="headerlink" title="simple_form"></a>simple_form</h2><p><code>gem install simple_form</code></p>
-<blockquote>
-<p>Forms made easy!</p>
-</blockquote>
-<p>如同作者的描述，這個套件可以讓我們在寫表單時少寫一些程式碼，讓表單變得更簡單。</p>
-<h2 id="foreman"><a href="#foreman" class="headerlink" title="foreman"></a>foreman</h2><p><code>gem install foreman</code></p>
-<blockquote>
-<p>Process manager for applications with multiple components</p>
-</blockquote>
-<p>這個套件可以用一個終端機就開啟多個應用。例如要同時開 rails server 和 webpack-dev-server 時，只要將欲開啟的東西寫入Procfile，然後只用一個終端機輸入指令foreman s就可以一次把兩個打開，而不用多開一個終端機。</p>
-<h2 id="devise"><a href="#devise" class="headerlink" title="devise"></a>devise</h2><p><code>gem install device</code></p>
-<blockquote>
-<p>Flexible authentication solution for Rails with Warden</p>
-</blockquote>
-<p>安裝後就可以立刻做出使用者登出登入的功能，而且功能彈性可以客製化調整，還可以串接第三方登入。</p>
-<h2 id="carrierwave"><a href="#carrierwave" class="headerlink" title="carrierwave"></a>carrierwave</h2><p><code>gem install carrierwave</code></p>
-<blockquote>
-<p>Upload files in your Ruby applications, map them to a range of ORMs, store them on different backends.</p>
-</blockquote>
-<p>要做上傳檔案的功能時可以使用這個套件，包括圖片、音檔…等，搭配fog-aws套件可以將檔案儲存在Amazon Web Services裡面，實務上好像還蠻常用到的。</p>
-<h2 id="figaro"><a href="#figaro" class="headerlink" title="figaro"></a>figaro</h2><p><code>gem install figaro</code></p>
-<blockquote>
-<p>Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file</p>
-</blockquote>
-<p>可以將私密的金鑰或密碼等資訊存在環境變數中，並且把該檔案放入.gitignore，讓它不會上傳到GitHub去。</p>
-<h2 id="acts-as-paranoid"><a href="#acts-as-paranoid" class="headerlink" title="acts_as_paranoid"></a>acts_as_paranoid</h2><p><code>gem install acts_as_paranoid</code></p>
-<blockquote>
-<p>A Rails plugin to add soft delete.<br>This gem can be used to hide records instead of deleting them, making them recoverable later.</p>
-</blockquote>
-<p>提供軟刪除功能，讓使用者在刪除資料時只是將該筆資料新增deleted_at欄位的時間，並且隱藏不顯示。</p>
+        <h1 id="環境要求"><a href="#環境要求" class="headerlink" title="環境要求"></a>環境要求</h1><p>本篇文章僅介紹如何在Rails專案裡安裝tailwindcss，請先安裝好</p>
+<ul>
+<li>Rails</li>
+<li>Yarn</li>
+</ul>
+<hr>
+<h1 id="創立專案-rails-new"><a href="#創立專案-rails-new" class="headerlink" title="創立專案 rails new"></a>創立專案 rails new</h1><p>先來創建一個示範用的專案（名稱隨意），並cd過去</p>
+<ol>
+<li>$<code>rails new tailwind_css</code></li>
+<li>$<code>cd tailwind_css</code></li>
+</ol>
+<hr>
+<h1 id="安裝Tailwind-CSS-v2-0"><a href="#安裝Tailwind-CSS-v2-0" class="headerlink" title="安裝Tailwind CSS v2.0"></a>安裝Tailwind CSS v2.0</h1><p>一開始我先根據<a target="_blank" rel="noopener" href="https://tailwindcss.com/docs/installation">官網</a>的指令，安裝最新版的postcss和autoprefixer，但會噴出以下錯誤</p>
+<pre><code class="bash">Error: PostCSS plugin tailwindcss requires PostCSS 8.
+</code></pre>
+<p>因此，在<a target="_blank" rel="noopener" href="https://tailwindcss.com/docs/installation#post-css-7-compatibility-build">下面</a>這邊說到，可以改安裝postcss7及autoprefixer9相容的版本，輸入以下指令：<br>3. $<code>yarn add tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9</code></p>
+<h2 id="創建config設定檔，並加入purge清除的檔案"><a href="#創建config設定檔，並加入purge清除的檔案" class="headerlink" title="創建config設定檔，並加入purge清除的檔案"></a>創建config設定檔，並加入purge清除的檔案</h2><ol start="4">
+<li><p>$<code>npx tailwindcss init</code>，這個指令會在根目錄創建一個<em>tailwind.config.js</em>的檔案，</p>
+</li>
+<li><p>在<em>tailwind.config.js</em>的<strong>purge</strong>裡面新增*號檔案（※註１）</p>
+</li>
+</ol>
+<pre><code class="js">// tailwind.config.js
+
+module.exports = &#123;
+  purge: [
+    &quot;./app/**/*.html.erb&quot;,
+    &quot;./app/helpers/**/*.rb&quot;,
+    &quot;./app/javascript/**/*.js&quot;,
+    &quot;./app/javascript/**/*.vue&quot;,
+  ],
+  darkMode: false, // or &#39;media&#39; or &#39;class&#39;
+  theme: &#123;
+    extend: &#123;&#125;,
+  &#125;,
+  variants: &#123;
+    extend: &#123;&#125;,
+  &#125;,
+  plugins: [],
+&#125;
+</code></pre>
+<h2 id="引入tailwindcss"><a href="#引入tailwindcss" class="headerlink" title="引入tailwindcss"></a>引入tailwindcss</h2><ol start="6">
+<li><p>在 <em>/app/javascript/</em> 資料夾下新增一個資料夾，並且在該資下夾下新增一個scss檔案（名稱隨意，我這裡資料夾取名叫<em>tailwind</em>，scss檔案取名叫<em>tailwindcss.scss</em>）</p>
+</li>
+<li><p>在該scss檔案新增以下三行，引入tailwindcss</p>
+</li>
+</ol>
+<pre><code class="scss">// app/javascript/tailwind/tailwindcss.
+
+@import &quot;tailwindcss/base&quot;;
+@import &quot;tailwindcss/components&quot;;
+@import &quot;tailwindcss/utilities&quot;;
+</code></pre>
+<h2 id="將tailwindcss引入打包檔"><a href="#將tailwindcss引入打包檔" class="headerlink" title="將tailwindcss引入打包檔"></a>將tailwindcss引入打包檔</h2><ol start="8">
+<li>在 <em>/app/javascript/packs/application.js</em> 檔案裡新增一行，引入剛剛創建的scss檔案</li>
+</ol>
+<pre><code class="js">// app/javascript/packs/application.js
+
+import &quot;tailwind/tailwindcss&quot;
+</code></pre>
+<h2 id="在postcss裡面引入tailwind"><a href="#在postcss裡面引入tailwind" class="headerlink" title="在postcss裡面引入tailwind"></a>在postcss裡面引入tailwind</h2><ol start="9">
+<li>在根目錄裡面應該有個 <em>postcss.config.js</em> 檔案，新增一行require，調整後如下</li>
+</ol>
+<pre><code class="js">// postcss.config.js
+
+module.exports = &#123;
+  plugins: [
+    require(&#39;tailwindcss&#39;)(&#39;tailwind.config.js&#39;),
+    require(&#39;postcss-import&#39;),
+    require(&#39;postcss-flexbugs-fixes&#39;),
+    require(&#39;postcss-preset-env&#39;)(&#123;
+      autoprefixer: &#123;
+        flexbox: &#39;no-2009&#39;
+      &#125;,
+      stage: 3
+    &#125;)
+  ]
+&#125;
+</code></pre>
+<h2 id="調整layout"><a href="#調整layout" class="headerlink" title="調整layout"></a>調整layout</h2><ol start="10">
+<li>找到 <em>/app/views/layouts/application.html.erb</em> 檔案，將stylesheet後面的<strong>link</strong>改成<strong>pack</strong></li>
+</ol>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;TailwindCss&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+    &lt;%= csrf_meta_tags %&gt;
+    &lt;%= csp_meta_tag %&gt;
+
+    &lt;%= stylesheet_pack_tag &#39;application&#39;, media: &#39;all&#39;, &#39;data-turbolinks-track&#39;: &#39;reload&#39; %&gt;
+    &lt;%= javascript_pack_tag &#39;application&#39;, &#39;data-turbolinks-track&#39;: &#39;reload&#39; %&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;%= yield %&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<hr>
+<p>做完這10個步驟，應該就可以在你的html.erb裡面使用tailwindcss了，接下來我們新增一個頁面來確認一下</p>
+<h1 id="測試效果"><a href="#測試效果" class="headerlink" title="測試效果"></a>測試效果</h1><h2 id="新增頁面並設定主頁"><a href="#新增頁面並設定主頁" class="headerlink" title="新增頁面並設定主頁"></a>新增頁面並設定主頁</h2><ol start="11">
+<li><p>$<code>rails g controller static home</code>，新增一個名叫static的controller以及home方法</p>
+</li>
+<li><p>在VScode按ctrl+P，搜尋「routes」，快速找到 <em>/config/routes.rb</em> 這個檔案，新增一個root路徑</p>
+</li>
+</ol>
+<pre><code class="rb"># config/routes.rb
+
+Rails.application.routes.draw do
+  get &#39;static/home&#39;
+
+  root &#39;static#home&#39;
+end
+</code></pre>
+<h2 id="開啟rails-server及webpacker"><a href="#開啟rails-server及webpacker" class="headerlink" title="開啟rails server及webpacker"></a>開啟rails server及webpacker</h2><ol start="13">
+<li><p>$<code>bin/webpack-dev-server</code>，開啟webpacker打包css及js檔案</p>
+</li>
+<li><p>再開啟一個終端機，cd切換到專案的目錄（參考步驟2.，像我就是cd到tailwind_css），並輸入$<code>rails s</code></p>
+</li>
+</ol>
+<p>這時候應該會看到 <em>/app/views/static/home.html.erb</em> 這個檔案渲染出的畫面，接著我們去該檔案新增一些class</p>
+<p><img src="01-without_css.jpg"></p>
+<h2 id="新增tailwindcss的class效果"><a href="#新增tailwindcss的class效果" class="headerlink" title="新增tailwindcss的class效果"></a>新增tailwindcss的class效果</h2><ol start="15">
+<li>修改 <em>home.html.erb</em> 內容</li>
+</ol>
+<pre><code>&lt;!-- /app/views/static/home.html.erb --&gt;
+
+&lt;h1 class=&quot;text-5xl bg-red-200&quot;&gt;Static#home&lt;/h1&gt;
+&lt;p&gt;Find me in app/views/static/home.html.erb&lt;/p&gt;
+</code></pre>
+<p>若沒有意外的話，應該可以看到瀏覽器的頁面會跟剛剛不一樣了<br><img src="02-with_css.jpg"></p>
+<p>這樣就可以確認成功安裝好Tailwind囉～</p>
+<hr>
+<h1 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h1><h2 id="註釋"><a href="#註釋" class="headerlink" title="註釋"></a>註釋</h2><p>註１：由於tailwindcss整個套件有點龐大，而我們實作上一定不會把每一個class都使用到專案裡面。因此，透過設定purge的功能，可以將所有設定路徑的檔案過濾，然後保留有使用到的class，未使用到的就不會打包進去，可以大幅減少檔案大小，讓發布的時候可以減輕負擔，增加上傳速度。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://tailwindcss.com/docs">TailwindCSS官方網站</a>，左側往下拉可以找到一些class使用方式的教學</li>
+<li><a target="_blank" rel="noopener" href="https://web-crunch.com/posts/how-to-install-tailwind-css-2-using-ruby-on-rails">How to install Tailwind CSS v2.0 using Ruby on Rails</a></li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源。 </span>
