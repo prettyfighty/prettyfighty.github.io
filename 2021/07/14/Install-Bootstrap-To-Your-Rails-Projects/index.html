@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>在Rails專案裡安裝TailwindCSS | 被遺棄的天堂</title>
-  <meta name="keywords" content=" rails , tailwind ">
-  <meta name="description" content="在Rails專案裡安裝TailwindCSS | 被遺棄的天堂">
+  <title>在Rails專案裡安裝Bootstrap 5 | 被遺棄的天堂</title>
+  <meta name="keywords" content=" rails , bootstrap ">
+  <meta name="description" content="在Rails專案裡安裝Bootstrap 5 | 被遺棄的天堂">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="求職嗨，我叫賴賴（Lailai）目前正在找 Ruby on Rails developer 相關的工作歡迎使用email與我聯繫，給我們一個了解彼此的機會Email: &amp;#112;&amp;#114;&amp;#x65;&amp;#116;&amp;#116;&amp;#121;&amp;#102;&amp;#105;&amp;#103;&amp;#x68;&amp;#x74;&amp;#x79;&amp;#x40;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x2e;&amp;#x">
 <meta property="og:type" content="website">
@@ -384,9 +384,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Install-Tailwind-To-You-Rails-Projecs" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Install-Bootstrap-To-Your-Rails-Projects" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">在Rails專案裡安裝TailwindCSS</h1>
+        <h1 class="article-title">在Rails專案裡安裝Bootstrap 5</h1>
     
     <div class="article-meta">
         
@@ -406,14 +406,14 @@
             
             <a class="color1">rails</a>
             
-            <a class="color4">tailwind</a>
+            <a class="color5">bootstrap</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2021-07-13 19:03:51'>2021-05-18 14:12</time>
+            Created At : <time class="date" title='Updated At: 2021-07-14 14:22:14'>2021-07-14 14:22</time>
         
     </div>
     <!-- <div class="article-meta">
@@ -424,7 +424,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-text">環境要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%B5%E7%AB%8B%E5%B0%88%E6%A1%88-rails-new"><span class="toc-text">創立專案 rails new</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%9DTailwind-CSS-v2-0"><span class="toc-text">安裝Tailwind CSS v2.0</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%B5%E5%BB%BAconfig%E8%A8%AD%E5%AE%9A%E6%AA%94%EF%BC%8C%E4%B8%A6%E5%8A%A0%E5%85%A5purge%E6%B8%85%E9%99%A4%E7%9A%84%E6%AA%94%E6%A1%88"><span class="toc-text">創建config設定檔，並加入purge清除的檔案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5tailwindcss"><span class="toc-text">引入tailwindcss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%87tailwindcss%E5%BC%95%E5%85%A5%E6%89%93%E5%8C%85%E6%AA%94"><span class="toc-text">將tailwindcss引入打包檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8postcss%E8%A3%A1%E9%9D%A2%E5%BC%95%E5%85%A5tailwind"><span class="toc-text">在postcss裡面引入tailwind</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%BF%E6%95%B4layout"><span class="toc-text">調整layout</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%AC%E8%A9%A6%E6%95%88%E6%9E%9C"><span class="toc-text">測試效果</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E9%A0%81%E9%9D%A2%E4%B8%A6%E8%A8%AD%E5%AE%9A%E4%B8%BB%E9%A0%81"><span class="toc-text">新增頁面並設定主頁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%96%8B%E5%95%9Frails-server%E5%8F%8Awebpacker"><span class="toc-text">開啟rails server及webpacker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%A2%9Etailwindcss%E7%9A%84class%E6%95%88%E6%9E%9C"><span class="toc-text">新增tailwindcss的class效果</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A3%9C%E5%85%85"><span class="toc-text">補充</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A8%BB%E9%87%8B"><span class="toc-text">註釋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-text">參考資料</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-text">環境要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%B5%E7%AB%8B%E5%B0%88%E6%A1%88-rails-new"><span class="toc-text">創立專案 rails new</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%9DBootstrap-v5-0"><span class="toc-text">安裝Bootstrap v5.0</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-webpack-%E7%9A%84-config-%E8%A8%AD%E5%AE%9A%E6%AA%94"><span class="toc-text">修改 webpack 的 config 設定檔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5bootstrap"><span class="toc-text">引入bootstrap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%BF%E6%95%B4layout"><span class="toc-text">調整layout</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%AC%E8%A9%A6%E6%95%88%E6%9E%9C"><span class="toc-text">測試效果</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E9%A0%81%E9%9D%A2"><span class="toc-text">新增頁面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%96%8B%E5%95%9F-rails-server-%E5%8F%8A-webpacker"><span class="toc-text">開啟 rails server 及 webpacker</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A3%9C%E5%85%85"><span class="toc-text">補充</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -441,8 +441,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1></blockquote>
+<p>由於自己最近在做練習的專案時，安裝 bootstrap v5 遇到了一些問題，後來發現是 bootstrap 更新到 5 之後在所需的套件上有些小改變，想說來做個紀錄，如果有人在裝 bootstrap v5 也卡住的話，也許這篇文章可以幫上忙。</p>
+<blockquote>
 <h1 id="環境要求"><a href="#環境要求" class="headerlink" title="環境要求"></a>環境要求</h1></blockquote>
-<p>本篇文章僅介紹如何在Rails專案裡安裝tailwindcss，請先安裝好</p>
+<p>本篇文章僅介紹如何在 Rails 專案裡安裝 bootstrap5，請先安裝好</p>
 <ul>
 <li>Rails</li>
 <li>Yarn</li>
@@ -452,86 +455,168 @@
 <h1 id="創立專案-rails-new"><a href="#創立專案-rails-new" class="headerlink" title="創立專案 rails new"></a>創立專案 rails new</h1></blockquote>
 <p>先來創建一個示範用的專案（名稱隨意），並cd過去</p>
 <ol>
-<li>$<code>rails new tailwind_css</code></li>
-<li>$<code>cd tailwind_css</code></li>
+<li>$<code>rails new bootstrap5-demo</code></li>
+<li>$<code>cd bootstrap5-demo</code></li>
 </ol>
 <hr>
 <blockquote>
-<h1 id="安裝Tailwind-CSS-v2-0"><a href="#安裝Tailwind-CSS-v2-0" class="headerlink" title="安裝Tailwind CSS v2.0"></a>安裝Tailwind CSS v2.0</h1></blockquote>
-<p>一開始我先根據<a target="_blank" rel="noopener" href="https://tailwindcss.com/docs/installation">官網</a>的指令，安裝最新版的postcss和autoprefixer，但會噴出以下錯誤</p>
-<pre><code class="bash">Error: PostCSS plugin tailwindcss requires PostCSS 8.
-</code></pre>
-<p>因此，在<a target="_blank" rel="noopener" href="https://tailwindcss.com/docs/installation#post-css-7-compatibility-build">下面</a>這邊說到，可以改安裝postcss7及autoprefixer9相容的版本，輸入以下指令：<br>3. $<code>yarn add tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9</code></p>
-<h2 id="創建config設定檔，並加入purge清除的檔案"><a href="#創建config設定檔，並加入purge清除的檔案" class="headerlink" title="創建config設定檔，並加入purge清除的檔案"></a>創建config設定檔，並加入purge清除的檔案</h2><ol start="4">
-<li><p>$<code>npx tailwindcss init</code>，這個指令會在根目錄創建一個<em>tailwind.config.js</em>的檔案，</p>
-</li>
-<li><p>在<em>tailwind.config.js</em>的<strong>purge</strong>裡面新增*號檔案（※註１）</p>
-</li>
+<h1 id="安裝Bootstrap-v5-0"><a href="#安裝Bootstrap-v5-0" class="headerlink" title="安裝Bootstrap v5.0"></a>安裝Bootstrap v5.0</h1></blockquote>
+<p>首先來看一下<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/getting-started/download/">官網的Getting started / Download</a>，這裡面介紹了很多種安裝的方法，其中也有 <a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/getting-started/download/#rubygems">RubyGems</a> 的方式，但我們今天要介紹的是 <a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/getting-started/download/#yarn">yarn</a> 的安裝方法。</p>
+<ol start="3">
+<li>$<code>yarn add bootstrap</code></li>
 </ol>
-<pre><code class="js">// tailwind.config.js
-
-module.exports = &#123;
-  purge: [
-    &quot;./app/**/*.html.erb&quot;,
-    &quot;./app/helpers/**/*.rb&quot;,
-    &quot;./app/javascript/**/*.js&quot;,
-    &quot;./app/javascript/**/*.vue&quot;,
-  ],
-  darkMode: false, // or &#39;media&#39; or &#39;class&#39;
-  theme: &#123;
-    extend: &#123;&#125;,
-  &#125;,
-  variants: &#123;
-    extend: &#123;&#125;,
-  &#125;,
-  plugins: [],
-&#125;
+<pre><code>yarn add v1.22.5
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info fsevents@2.3.2: The platform &quot;linux&quot; is incompatible with this module.
+info &quot;fsevents@2.3.2&quot; is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@1.2.13: The platform &quot;linux&quot; is incompatible with this module.
+info &quot;fsevents@1.2.13&quot; is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+warning &quot; &gt; bootstrap@5.0.2&quot; has unmet peer dependency &quot;@popperjs/core@^2.9.2&quot;.
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 1 new dependency.
+info Direct dependencies
+└─ bootstrap@5.0.2
+info All dependencies
+└─ bootstrap@5.0.2
+Done in 16.15s.
 </code></pre>
-<h2 id="引入tailwindcss"><a href="#引入tailwindcss" class="headerlink" title="引入tailwindcss"></a>引入tailwindcss</h2><ol start="6">
-<li><p>在 <em>/app/javascript/</em> 資料夾下新增一個資料夾，並且在該資下夾下新增一個scss檔案（名稱隨意，我這裡資料夾取名叫<em>tailwind</em>，scss檔案取名叫<em>tailwindcss.scss</em>）</p>
-</li>
-<li><p>在該scss檔案新增以下三行，引入tailwindcss</p>
-</li>
+<p>在這邊看到一個warning，它說 <strong>bootstrap v5.0.2</strong> 需要 <strong>@popperjs/core</strong> 這個東西，而我們的專案裡面還沒有安裝，所以接著來安裝它。</p>
+<ol start="4">
+<li>$<code>yarn add @popperjs/core@^2.9.2</code></li>
 </ol>
-<pre><code class="scss">// app/javascript/tailwind/tailwindcss.
-
-@import &quot;tailwindcss/base&quot;;
-@import &quot;tailwindcss/components&quot;;
-@import &quot;tailwindcss/utilities&quot;;
+<pre><code>yarn add v1.22.5
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info fsevents@2.3.2: The platform &quot;linux&quot; is incompatible with this module.
+info &quot;fsevents@2.3.2&quot; is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@1.2.13: The platform &quot;linux&quot; is incompatible with this module.
+info &quot;fsevents@1.2.13&quot; is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 1 new dependency.
+info Direct dependencies
+└─ @popperjs/core@2.9.2
+info All dependencies
+└─ @popperjs/core@2.9.2
+Done in 39.76s.
 </code></pre>
-<h2 id="將tailwindcss引入打包檔"><a href="#將tailwindcss引入打包檔" class="headerlink" title="將tailwindcss引入打包檔"></a>將tailwindcss引入打包檔</h2><ol start="8">
-<li>在 <em>/app/javascript/packs/application.js</em> 檔案裡新增一行，引入剛剛創建的scss檔案</li>
+<p>此外，打開 <em>node_modules/bootstrap/package.json</em>，可以看到：</p>
+<pre><code class="json">// node_modules/bootstrap/package.json
+
+  &quot;devDependencies&quot;: &#123;
+    ...
+    &quot;@popperjs/core&quot;: &quot;^2.9.2&quot;,
+    ...
+    &quot;jquery&quot;: &quot;^3.6.0&quot;,
+    ...
+  &#125;
+</code></pre>
+<p>從這邊可以知道，bootstrap 除了需要 @popperjs/core 之外，還需要安裝 jquery</p>
+<ol start="5">
+<li>$<code>yarn add jquery</code></li>
+</ol>
+<pre><code>ependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 1 new dependency.
+info Direct dependencies
+└─ jquery@3.6.0
+info All dependencies
+└─ jquery@3.6.0
+Done in 53.53s.
+</code></pre>
+<p>看起來初步安裝應該是沒什麼問題了，接著要來做一些設定的部分。</p>
+<h2 id="修改-webpack-的-config-設定檔"><a href="#修改-webpack-的-config-設定檔" class="headerlink" title="修改 webpack 的 config 設定檔"></a>修改 webpack 的 config 設定檔</h2><p>因為我們要使用 webpacker 來將 CSS 的部分也一起打包，而不是使用 asset pipe line 的方式，所以這邊要修改一下 <strong>webpack/environment.js</strong> 這個檔案，如下：</p>
+<ol start="6">
+<li>修改 <em>config/webpack/environment.js</em></li>
+</ol>
+<pre><code class="js">// config/webpack/environment.js
+
+const &#123; environment &#125; = require(&#39;@rails/webpacker&#39;)
+const webpack = require(&#39;webpack&#39;)
+
+environment.plugins.prepend(
+  &#39;Provide&#39;,
+  new webpack.ProvidePlugin(&#123;
+    $: &#39;jquery&#39;,
+    jQuery: &#39;jquery&#39;,
+    jquery: &#39;jquery&#39;,
+    Popper: [&#39;@popperjs/core&#39;],
+  &#125;)
+)
+
+module.exports = environment
+</code></pre>
+<h2 id="引入bootstrap"><a href="#引入bootstrap" class="headerlink" title="引入bootstrap"></a>引入bootstrap</h2><ol start="7">
+<li>在 <em>app/javascript/packs/application.js</em> 引入 bootstrap，並參考官網設定<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/components/popovers/#example-enable-popovers-everywhere">popovers</a>及<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/components/tooltips/#example-enable-tooltips-everywhere">tooltips</a></li>
 </ol>
 <pre><code class="js">// app/javascript/packs/application.js
 
-import &quot;tailwind/tailwindcss&quot;
-</code></pre>
-<h2 id="在postcss裡面引入tailwind"><a href="#在postcss裡面引入tailwind" class="headerlink" title="在postcss裡面引入tailwind"></a>在postcss裡面引入tailwind</h2><ol start="9">
-<li>在根目錄裡面應該有個 <em>postcss.config.js</em> 檔案，新增一行require，調整後如下</li>
-</ol>
-<pre><code class="js">// postcss.config.js
+import &quot;bootstrap&quot;
+const bootstrap = require(&#39;bootstrap&#39;)
 
-module.exports = &#123;
-  plugins: [
-    require(&#39;tailwindcss&#39;)(&#39;tailwind.config.js&#39;),
-    require(&#39;postcss-import&#39;),
-    require(&#39;postcss-flexbugs-fixes&#39;),
-    require(&#39;postcss-preset-env&#39;)(&#123;
-      autoprefixer: &#123;
-        flexbox: &#39;no-2009&#39;
-      &#125;,
-      stage: 3
-    &#125;)
-  ]
+document.addEventListener(&quot;turbolinks:load&quot;, () =&gt; &#123;
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll(&#39;[data-bs-toggle=&quot;tooltip&quot;]&#39;))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) &#123;
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  &#125;)
+  var popoverTriggerList = [].slice.call(document.querySelectorAll(&#39;[data-bs-toggle=&quot;popover&quot;]&#39;))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) &#123;
+    return new bootstrap.Popover(popoverTriggerEl)
+  &#125;)
+&#125;)
+</code></pre>
+<ol start="8">
+<li>在 <em>app/javascript</em> 目錄下，新增 <em>styles</em> 資料夾，並在該資料夾內新增 <em>index.js</em> 及 <em>bootstrap.scss</em> 檔案</li>
+</ol>
+<pre><code class="js">// app/javascript/styles/index.js
+
+import &#39;./bootstrap&#39;
+</code></pre>
+<pre><code class="scss">// app/javascript/styles/bootstrap.scss
+
+@import &#39;~bootstrap/scss/bootstrap&#39;
+</code></pre>
+<p>因為我習慣把 CSS 相關的檔案都建一個資料夾來管理，所以才會建立 styles 資料夾，裡面可以寫整個專案的 CSS。要記得在 packs/application.js 裡面把 styles 資料夾給拉進來打包。</p>
+<pre><code class="js">// app/javascript/packs/application.js
+
+import &quot;styles&quot;
+</code></pre>
+<p>直接這樣寫的話，他就會去抓 app/javascript/styles/index.js 這個檔案，因此我們剛剛需要在 styles 資料夾建立 index.js 的檔案，而這個 index.js 裡面再把同層的 bootstrap.scss 這個檔案引入，這樣 application.js 就可以抓到 bootstrap.scss 這個檔案了！</p>
+<p>因為 bootstrap 畢竟是個人家設定好的框架，之後若是想新增自己寫的CSS檔案的話，就直接在 styles 資料夾下面新增檔案，接著在 index.js 裡面把它 import 進來即可。</p>
+<ul>
+<li><p><strong>若是之後想要新增手刻的CSS檔案：</strong></p>
+<pre><code class="scss">// app/javascript/styles/common.scss
+
+#helloUser &#123;
+  cursor: text;
+&#125;
+
+.avatar-label &#123;
+  vertical-align: middle;
 &#125;
 </code></pre>
-<h2 id="調整layout"><a href="#調整layout" class="headerlink" title="調整layout"></a>調整layout</h2><ol start="10">
+<pre><code class="js">// app/javascript/styles/index.js
+
+import &#39;./common&#39;
+</code></pre>
+<p>如此一來，這個新增的 common 檔案，就可以順利被 webpacker 打包進去了！</p>
+</li>
+</ul>
+<h2 id="調整layout"><a href="#調整layout" class="headerlink" title="調整layout"></a>調整layout</h2><p>跟安裝 TailwindCSS 一樣，因為我們希望使用 webpacker 來打包 CSS 檔案，因此需要在 views/layouts/application.html.erb 做一些調整如下：</p>
+<ol start="9">
 <li>找到 <em>/app/views/layouts/application.html.erb</em> 檔案，將stylesheet後面的<strong>link</strong>改成<strong>pack</strong></li>
 </ol>
-<pre><code>&lt;!DOCTYPE html&gt;
+<pre><code class="html">&lt;!-- app/views/layouts/application.html.erb --&gt;
+
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;TailwindCss&lt;/title&gt;
+    &lt;title&gt;Bootstrap5Demo&lt;/title&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
     &lt;%= csrf_meta_tags %&gt;
     &lt;%= csp_meta_tag %&gt;
@@ -545,49 +630,112 @@ module.exports = &#123;
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<hr>
-<p>做完這10個步驟，應該就可以在你的html.erb裡面使用tailwindcss了，接下來我們新增一個頁面來確認一下</p>
 <blockquote>
 <h1 id="測試效果"><a href="#測試效果" class="headerlink" title="測試效果"></a>測試效果</h1></blockquote>
-<h2 id="新增頁面並設定主頁"><a href="#新增頁面並設定主頁" class="headerlink" title="新增頁面並設定主頁"></a>新增頁面並設定主頁</h2><ol start="11">
-<li><p>$<code>rails g controller static home</code>，新增一個名叫static的controller以及home方法</p>
-</li>
-<li><p>在VScode按ctrl+P，搜尋「routes」，快速找到 <em>/config/routes.rb</em> 這個檔案，新增一個root路徑</p>
-</li>
+<h2 id="新增頁面"><a href="#新增頁面" class="headerlink" title="新增頁面"></a>新增頁面</h2><ol start="10">
+<li>$<code>rails g controller static home</code>，新增一個名叫 static 的 controller 以及 home 方法</li>
 </ol>
-<pre><code class="rb"># config/routes.rb
-
-Rails.application.routes.draw do
-  get &#39;static/home&#39;
-
-  root &#39;static#home&#39;
-end
+<pre><code>Running via Spring preloader in process 1079
+      create  app/controllers/static_controller.rb
+       route  get &#39;static/home&#39;
+      invoke  erb
+      create    app/views/static
+      create    app/views/static/home.html.erb
+      invoke  test_unit
+      create    test/controllers/static_controller_test.rb
+      invoke  helper
+      create    app/helpers/static_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    scss
+      create      app/assets/stylesheets/static.scss
 </code></pre>
-<h2 id="開啟rails-server及webpacker"><a href="#開啟rails-server及webpacker" class="headerlink" title="開啟rails server及webpacker"></a>開啟rails server及webpacker</h2><ol start="13">
-<li><p>$<code>bin/webpack-dev-server</code>，開啟webpacker打包css及js檔案</p>
-</li>
-<li><p>再開啟一個終端機，cd切換到專案的目錄（參考步驟2.，像我就是cd到tailwind_css），並輸入$<code>rails s</code></p>
-</li>
+<p>這個指令在之前的文章裡面也有使用到，可以看到它會建立 controller、views，連 routes 都幫我們設定好了。</p>
+<ol start="11">
+<li>到官網複製一些程式碼，例如<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/components/navbar/#supported-content">NavBar</a>、<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/components/popovers/#example">popovers</a>、<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/components/tooltips/#examples">tooltips</a>，貼到 <em>app/views/static/home.html.erb</em></li>
 </ol>
-<p>這時候應該會看到 <em>/app/views/static/home.html.erb</em> 這個檔案渲染出的畫面，接著我們去該檔案新增一些class</p>
-<p><img src="01-without_css.jpg"></p>
-<h2 id="新增tailwindcss的class效果"><a href="#新增tailwindcss的class效果" class="headerlink" title="新增tailwindcss的class效果"></a>新增tailwindcss的class效果</h2><ol start="15">
-<li>修改 <em>home.html.erb</em> 內容</li>
-</ol>
-<pre><code>&lt;!-- /app/views/static/home.html.erb --&gt;
+<pre><code class="html">&lt;!-- app/views/static/home.html.erb --&gt;
 
-&lt;h1 class=&quot;text-5xl bg-red-200&quot;&gt;Static#home&lt;/h1&gt;
-&lt;p&gt;Find me in app/views/static/home.html.erb&lt;/p&gt;
+&lt;div class=&quot;container&quot;&gt;
+  &lt;h1&gt;Static#home&lt;/h1&gt;
+  &lt;p&gt;Find me in app/views/static/home.html.erb&lt;/p&gt;
+
+  &lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+      &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;
+      &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarSupportedContent&quot; aria-controls=&quot;navbarSupportedContent&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+        &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;
+        &lt;ul class=&quot;navbar-nav me-auto mb-2 mb-lg-0&quot;&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;a class=&quot;nav-link active&quot; aria-current=&quot;page&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;nav-item dropdown&quot;&gt;
+            &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; id=&quot;navbarDropdown&quot; role=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+              Dropdown
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;navbarDropdown&quot;&gt;
+              &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;hr class=&quot;dropdown-divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;a class=&quot;nav-link disabled&quot; href=&quot;#&quot; tabindex=&quot;-1&quot; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;form class=&quot;d-flex&quot;&gt;
+          &lt;input class=&quot;form-control me-2&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;
+          &lt;button class=&quot;btn btn-outline-success&quot; type=&quot;submit&quot;&gt;Search&lt;/button&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;div class=&quot;mb-5&quot;&gt;&lt;/div&gt;
+
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-danger&quot; data-bs-toggle=&quot;popover&quot; title=&quot;Popover title&quot; data-bs-content=&quot;And here&#39;s some amazing content. It&#39;s very engaging. Right?&quot;&gt;Click to toggle popover&lt;/button&gt;
+
+  &lt;div class=&quot;mb-5&quot;&gt;&lt;/div&gt;
+
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;Tooltip on top&quot;&gt;
+    Tooltip on top
+  &lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;right&quot; title=&quot;Tooltip on right&quot;&gt;
+    Tooltip on right
+  &lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;bottom&quot; title=&quot;Tooltip on bottom&quot;&gt;
+    Tooltip on bottom
+  &lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;left&quot; title=&quot;Tooltip on left&quot;&gt;
+    Tooltip on left
+  &lt;/button&gt;
+&lt;/div&gt;
 </code></pre>
-<p>若沒有意外的話，應該可以看到瀏覽器的頁面會跟剛剛不一樣了<br><img src="02-with_css.jpg"></p>
-<p>這樣就可以確認成功安裝好Tailwind囉～</p>
-<hr>
+<h2 id="開啟-rails-server-及-webpacker"><a href="#開啟-rails-server-及-webpacker" class="headerlink" title="開啟 rails server 及 webpacker"></a>開啟 rails server 及 webpacker</h2><ol start="12">
+<li><p>$<code>bin/webpack-dev-server</code>，開啟 webpacker 打包 css 及 js 檔案</p>
+</li>
+<li><p>再開啟一個終端機，cd切換到專案的目錄（參考步驟2.，像我就是cd到tailwind_css），並輸入$<code>rails s</code> 開始本地伺服器</p>
+</li>
+</ol>
+<p>在瀏覽器輸入網址 <strong>localhost:3000</strong>，應該會成功看到 Rails 的歡迎畫面<br><img src="01-welcome.jpg"></p>
+<p>因為我們這次沒有特別設定首頁，因此要在網址列輸入 <strong>localhost:3000/static/home</strong> 才會看到 <em>/app/views/static/home.html.erb</em> 這個檔案的內容。</p>
+<p><img src="02-bootstrap.jpg"></p>
+<p>看到這個畫面，表示 bootstrap 的 CSS 已經成功裝好了，接著要按按看那幾個按鈕，滑鼠移過去看看有沒有效果</p>
+<p><img src="03-bootstrap_success.jpg"></p>
+<p>如果有成功出現這些效果的話，就可以確定連 popover 和 tooltips 的也成功設定完成了！</p>
 <blockquote>
 <h1 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h1></blockquote>
-<h2 id="註釋"><a href="#註釋" class="headerlink" title="註釋"></a>註釋</h2><p>註１：由於tailwindcss整個套件有點龐大，而我們實作上一定不會把每一個class都使用到專案裡面。因此，透過設定purge的功能，可以將所有設定路徑的檔案過濾，然後保留有使用到的class，未使用到的就不會打包進去，可以大幅減少檔案大小，讓發布的時候可以減輕負擔，增加上傳速度。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://tailwindcss.com/docs">TailwindCSS官方網站</a>，左側往下拉可以找到一些class使用方式的教學</li>
-<li><a target="_blank" rel="noopener" href="https://web-crunch.com/posts/how-to-install-tailwind-css-2-using-ruby-on-rails">How to install Tailwind CSS v2.0 using Ruby on Rails</a></li>
+<ul>
+<li><p>本篇介紹的程式碼，都可以在我的GitHub上找到，請參考<a target="_blank" rel="noopener" href="https://github.com/prettyfighty/bootstrap5-demo/commit/563517899bf2c80cfd2e4f974af31c89bb79259e">bootstrap5-demo</a>，若有任何問題或是指正，歡迎再上面留言跟我說，謝謝！</p>
+</li>
+<li><p>步驟 3 ~ 5，可以融合成 $<code>yarn add bootstrap jquery @popperjs/core@^2.9.2</code></p>
+</li>
 </ul>
 
       
